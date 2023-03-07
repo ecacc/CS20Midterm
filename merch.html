@@ -1,0 +1,356 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Merch | Eventastic</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <style type="text/css">
+
+            /* header and footer css */
+            li
+            {
+            font-size: 18px;
+            font-family:Arvo,Helvetica, Arial, "sans-serif";
+        }
+        #menu 
+        {
+            text-align: center; 
+            margin: 0;
+            width: 100%;
+            float: left;
+            background-color: #ffc311;
+        }
+        .nobull 
+        {
+            list-style-type: none; 
+            text-align:center;
+            margin: 0px;
+            padding: 5px;
+            
+        }
+        li 
+        {
+            
+            display: inline; 
+            color: white;
+            padding:0px; 
+            margin:10px; 
+        }
+        li a
+        {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding:30px;
+            text-decoration: none;
+        }
+        li a:hover 
+        {
+            background-color: #111;
+        }
+        .footer 
+        {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffc311;
+            color: white;
+            text-align: center;
+        }
+
+
+            /* page specific css */
+            body {
+                background-color: rgb(112, 172, 176)
+            }
+            .merchpage {
+                width: 100%; content: "";
+                display: table;
+                clear: both;
+                padding-top: 30px;
+            }
+            .merch {
+                width: 66%;
+                float: left;
+            }
+            .cart {
+                width: 33%;
+                float: left
+            }
+            .firstrow {
+                content: "";
+                display: table;
+                clear: both;
+                margin-bottom: 10px
+            }
+            .tshirt {
+                float: left;
+                margin-left: 20px;
+                margin-right: 20px;
+                background-color: rgb(89, 96, 109)
+            }
+            .crewneck {
+                float: left;
+                background-color: rgb(89, 96, 109)
+            }
+            .secondrow {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .totebag {
+                float: left;
+                margin-left: 20px;
+                margin-right: 20px;
+                background-color: rgb(89, 96, 109)
+            }
+            .pillow {
+                float: left;
+                background-color: rgb(89, 96, 109)
+            }
+            h3 {
+                text-align: center;
+                font-size: 35px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color:rgb(198, 240, 232)
+            }
+            .price {
+                font-size: 20px;
+                text-align: center
+            }
+            .merchIMG {
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px
+            }
+            img {
+                padding-left: 10px;
+            }
+            .cartText {
+                width: 475px;
+                height: 400px;
+                font-size: 22px;
+                resize: none;
+                font-family:'Times New Roman', Times, serif;
+                text-align: right;
+                background-color:rgb(248, 231, 183)
+            }
+            .purchase {
+                float: right;
+                margin-right: 20px
+            }
+            h2 {
+                color:rgb(89, 96, 109);
+                padding-left: 15px;
+            }
+            select:hover {
+                background-color:rgb(248, 231, 183)
+            }
+            .merchIMG:hover {
+                background-color:rgb(198, 240, 232)
+            }
+
+            /* just to keep track of all of the colors */
+            .colors {color: rgb(198, 240, 232); color: rgb(112, 172, 176); color: rgb(89, 96, 109); color: rgb(254, 195, 12)}
+        </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+
+        <script>
+            var merch = [0, 0, 0, 0];
+
+            /* rounding value to 2 decimal places */
+            function round(num)
+            {
+                remDecimal = (num * 100) % 1;
+                num = (num * 100) - remDecimal;
+                if (remDecimal >= .5)
+                {
+                    num += 1;
+                }
+                num /= 100;
+                return num;
+            }
+
+            /* creating total with 2 decimal places */
+            function writeTotal(num)
+            {
+                numStr = "" + num;
+                parts = numStr.split('.');
+                if (parts.length == 1)
+                {
+                    return numStr + '.00';
+                }
+                if (parts[1].length == 1)
+                {
+                    return numStr + '0';
+                } else 
+                {
+                    return numStr;
+                }
+            }
+
+            /* updates cart */
+            function updateCart(merchArr) {
+                tsTotal = merchArr[0] * 23.00;
+                cnTotal = merchArr[1] * 45.00;
+                tbTotal = merchArr[2] * 15.00;
+                pTotal = merchArr[3] * 21.00;
+                subT = tsTotal + cnTotal + tbTotal + pTotal;
+                tax = round(.0625 * subT);
+                tt = subT + tax;
+                document.getElementById("cartText").innerHTML = "\n" + merchArr[0] + " x T-Shirt . . . . . . . . . . . . . . . . . . . . $" + writeTotal(tsTotal) + "      "
+                + "\n" + "\n" + merchArr[1] + " x Crew Neck . . . . . . . . . . . . . . . . . . . $" + writeTotal(cnTotal) + "      "
+                + "\n" + "\n" + merchArr[2] + " x Tote Bag . . . . . . . . . . . . . . . . . . . $" + writeTotal(tbTotal) + "       "
+                + "\n" + "\n" + merchArr[3] + " x Pillow . . . . . . . . . . . . . . . . . . . . $" + writeTotal(pTotal) + "       "
+                + "\n" + "\n" + "SUBTOTAL: $" + writeTotal(subT) + "        "
+                + "\n" + "\n" + "TAX: $" + writeTotal(tax) + "        "
+                + "\n" + "\n" + "TOTAL: $" + writeTotal(tt) + "        ";
+            }
+
+            window.onload=function() {
+                var selectarr = ["tsSelect", "cnSelect", "tbSelect", "pSelect"];
+
+                /* changes selected index to value in cart */
+                for (let k = 0; k < 4; k++) {
+                    document.getElementById(selectarr[k]).onchange = function () {
+                        merch[k] = parseInt(this.options[this.selectedIndex].text);
+                        updateCart(merch);
+                    }
+                }
+
+                /* sets merch photos to become full screen when clicked */
+                $(document).ready(function(){$("img.merchIMG").click(function(){this.requestFullscreen()})});
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <!--header-->
+        <div id="menu">
+            <ul class="nobull">
+                <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://www.Youtube.com/"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Order</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Merch</a></li>
+            </ul>
+        </div>
+
+        <!--merch page-->
+        <div class="merchpage">
+            <div class="merch">
+                <div class="firstrow">
+                    <div class="tshirt">
+                        <h3>T-Shirt</h3>
+                        <img src="tshirt.jpg" class="merchIMG" width="400px"/> <br />
+                        <p class="price">
+                        Quantity: &nbsp; 
+                        <select id="tsSelect" size='1'>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        $23.00</p>               
+                    </div>
+                    <div class="crewneck">
+                        <h3>Crew Neck</h3>
+                        <img src="crewneck.jpg" class="merchIMG" width="400px"/>
+                        <p class="price">
+                            Quantity: &nbsp; 
+                            <select id="cnSelect" size='1'>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            $45.00</p>
+                    </div>
+                </div>
+                <div class="secondrow">
+                    <div class="totebag">
+                        <h3>Tote Bag</h3>
+                        <img src="totebag.jpg" class="merchIMG" width="400px"/>
+                        <p class="price">
+                            Quantity: &nbsp; 
+                            <select id="tbSelect" size='1'>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            $15.00</p>
+                    </div>
+                    <div class="pillow">
+                        <h3>Pillow</h3>
+                        <img src="pillow.jpg" class="merchIMG" width="400px"/>
+                        <p class="price">
+                            Quantity: &nbsp; 
+                            <select id="pSelect" size='1'>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            $21.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <form name="cart">
+                    <h3>Your Cart<img src="shoppingcart.png" width="30" /></h3>
+                    <textarea class='cartText' id='cartText' READONLY >
+
+    0 x T-Shirt . . . . . . . . . . . . . . . . . . . . $0.00      
+
+    0 x Crew Neck . . . . . . . . . . . . . . . . . . . $0.00      
+
+    0 x Tote Bag . . . . . . . . . . . . . . . . . . . $0.00       
+
+    0 x Pillow . . . . . . . . . . . . . . . . . . . . $0.00       
+
+    SUBTOTAL: $0.00        
+
+    TAX: $0.00        
+
+    TOTAL: $0.00        
+                    </textarea><br /> <br />
+                    <input type='submit' value='Purchase' id='purchase' class='purchase'>
+                </form>
+                <br /> <br /> <br /> <br /> <br /> <br />
+                <img src="eventastic.png" width="400" />
+                <h2>Thank You for Supporting Eventastic!</h2>
+            </div>
+        </div>
+
+        <br /> <br /> <br /> <br />
+
+        <!--footer-->
+        <footer class="footer">
+            <p>Contact the author: <a href="mailto:wxia02@tufts.edu">footer text</a></p>
+        </footer>
+
+    </body>
+</html>

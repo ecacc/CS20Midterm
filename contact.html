@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Us</title>
+        <style type="text/css">
+
+            body,html,li
+            {
+                font-size: 18px;
+                font-family:Arvo,Helvetica, Arial, "sans-serif"
+            }
+            label {
+                display: inline-block;
+                width: 250px;
+            }
+            input[type="text"] {
+                width: 250px;
+            }
+            textarea {
+                vertical-align: top;
+                width: 250px;
+                height: 150px;
+            }
+            h1 {
+                text-align: center;
+            }
+            h3 {
+                padding: 0px 500px 20px 500px;
+                text-align: center;
+            }
+            form {
+                padding: 0px 0px 0px 485px;
+            }
+            .row {
+              display: flex;
+            }
+            .column {
+                flex: 25%;
+                padding: 5px;
+            }
+            img {
+                width: 200px;
+                height: 300px;
+            }
+            #menu 
+            {
+                text-align: center; 
+                margin: 0;
+                width: 100%;
+                float: left;
+                background-color: #ffc311;
+            }
+            body 
+            {
+                background-color: #c6f1e7;
+                background-position: bottom;
+            }
+            .nobull 
+            {
+                list-style-type: none; 
+                text-align:center;
+                margin: 0px;
+                padding: 5px;
+                
+            }
+            li 
+            {
+                
+                display: inline; 
+                color: white;
+                padding:0px; 
+                margin:10px; 
+            }
+            li a
+            {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding:30px;
+                text-decoration: none;
+            }
+            li a:hover 
+            {
+                background-color: #111;
+            }
+            .footer 
+            {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #ffc311;
+                color: white;
+                text-align: center;
+            }
+            .footer 
+            {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #ffc311;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <ul class="nobull">
+                <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://www.Youtube.com/"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Order</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Merch</a></li>
+            </ul>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1>Meet Our Team</h1>
+        <h3>Our diverse team consists of experienced professionals who combine their talents to give you the best service possible!</h3>
+        <div class="row">
+            <div class="column" style="text-align: center;">
+                <img src="emily.jpg" alt="image" style="max-width:100%">
+                <h4>Emily Caccivio</h4>
+                <h5>Marketing Coordinator</h5>
+            </div>
+            <div class="column" style="text-align: center;">
+                <img src="abby.jpg" alt="image" style="max-width:100%">
+                <h4>Abigail Der</h4>
+                <h5>Project Manager</h5>
+            </div>
+            <div class="column" style="text-align: center;">
+                <img src="eric.jpg" alt="image" style="max-width:100%">
+                <h4>Eric Kim</h4>
+                <h5>Financial Analyst</h5>
+            </div>
+            <div class="column" style="text-align: center;">
+                <img src="will.jpg" alt="image" style="max-width:100%">
+                <h4>Will Xia</h4>
+                <h5>Web Designer</h5>
+            </div>
+        </div>
+        <h1>Contact Us</h1>
+        <h3>Please email us any questions you have regarding our services. We promise to answer as soon as possible!</h3>
+        <form>
+        <p class="contactForm">
+            <label>Name*:</label>
+            <input type="text" name="fullname"/>
+        </p>
+        <p class="contactForm">
+            <label>Email*:</label>
+            <input type="text" name="email"/>
+        </p>
+        <p class="contactForm">
+            <label>Subject*:</label>
+            <input type="text" name="subject"/>
+        </p>
+        <p class="contactForm">
+            <label for="message">Message*:</label>
+            <textarea id="message" name="message" placeholder="Enter your message here"></textarea>
+        </p>
+        
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            //validation
+            $(document).ready(function(){
+        		$("input[type='button']").click(function() {
+        			if ($("p[class='contactForm'] input").eq(0).val() == "") {
+        				alert("Please enter your full name");
+        				return;
+        			}
+        			if ($("p[class='contactForm'] input").eq(1).val() == "") {
+        				alert("Please enter your email address");
+        				return;
+        			}
+        			if ($("p[class='contactForm'] input").eq(2).val() == "") {
+        				alert("Please enter a subject");
+        				return;
+        			}
+        			if ($("p[class='contactForm'] textarea").val() == "") {
+        				alert("Please enter your reason for contact");
+        				return;
+        			}
+                });
+            });
+        </script>
+
+        <input type="button" value="Send Email"/>
+
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <footer class="footer">
+            <p>Contact the author: <a href="mailto:wxia02@tufts.edu">footer text</a></p>
+        </footer>
+    </body>
+</html>
