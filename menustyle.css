@@ -28,6 +28,17 @@
     padding:30px;
     text-decoration: none;
 }
+@media screen and (max-width: 600px)
+{
+    .nobull li a
+    {
+        display: block;
+    }
+    .nobull li img
+    {
+        display: none;
+    }
+}
 .nobull li a:hover 
 {
     background-color: #111;
@@ -43,3 +54,4 @@
     color: white;
     text-align: center;
 }
+
