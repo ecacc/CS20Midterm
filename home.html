@@ -23,10 +23,34 @@ body
         background-image: url('eventastic.png'); 
         background-repeat: no-repeat;
         background-size: 800px;
-        background-position: center;
+        background-position: center 85px;
     }
 }
+#why
+{
+    text-align: center;
+}
+.reviews 
+{
+    list-style-type: none; 
+    text-align:center;
+    margin: 0px;
+    padding: 5px;
+}
+.reviews li
+{
+    display: inline;
+    padding:0px; 
+    margin:10px;
+}
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).on("scroll", function () {
+        $('#why').fadeIn(5000);
+
+    });
+</script>
 </head>
 <body>
     <div id="menu">
@@ -41,9 +65,19 @@ body
             <li><a href="https://ecacc.github.io/CS20Midterm/merch.html">Merch</a></li>
         </ul>
     </div>
-    <div style="height: 800px;"></div>
-    <description><center>Eventastic Catering.......<center></description>
+    <div style="height: 820px;"></div>
+    <description style="font-size: 22px;"><center><strong>Why Choose Us For Your Next Event?<center></strong></description>
+    <br><br>
+    <div id="why" style="display: none;">
+    <ul class = "reviews">
+        <li><strong> &nbsp &nbsp  &nbsp &nbsp Rated 5/5 on Yelp</strong></li>
+        <li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</li>
+        <li><strong> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Rated 5/5 on Google Reviews</strong></li><br><br>
+        <li><img src="yelp_5.png"style="width:400px;height:200px"></li>
+        <li><img src="google_5.png"style="width:400px;height:200px"></li>
+    </ul>
     <br><br><br><br><br>
+    </div>
     <footer class="footer">
         <p>Contact the author: <a href="mailto:wxia02@tufts.edu">footer text</a></p>
     </footer>
