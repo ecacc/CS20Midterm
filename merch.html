@@ -3,61 +3,13 @@
         <meta charset="utf-8">
         <title>Merch | Eventastic</title>
         <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="menustyle.css">
         <style type="text/css">
 
-            /* header and footer css */
-            li
-            {
-            font-size: 18px;
-            font-family:Arvo,Helvetica, Arial, "sans-serif";
-        }
-        #menu 
-        {
-            text-align: center; 
-            margin: 0;
-            width: 100%;
-            float: left;
-            background-color: #ffc311;
-        }
-        .nobull 
-        {
-            list-style-type: none; 
-            text-align:center;
-            margin: 0px;
-            padding: 5px;
-            
-        }
-        li 
-        {
-            
-            display: inline; 
-            color: white;
-            padding:0px; 
-            margin:10px; 
-        }
-        li a
-        {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding:30px;
-            text-decoration: none;
-        }
-        li a:hover 
-        {
-            background-color: #111;
-        }
-        .footer 
-        {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: #ffc311;
-            color: white;
-            text-align: center;
-        }
-
+            li {
+                font-size: 18px;
+                font-family:Arvo,Helvetica, Arial, "sans-serif"
+            }
 
             /* page specific css */
             body {
@@ -166,14 +118,10 @@
             /* rounding value to 2 decimal places */
             function round(num)
             {
-                remDecimal = (num * 100) % 1;
-                num = (num * 100) - remDecimal;
-                if (remDecimal >= .5)
-                {
-                    num += 1;
-                }
-                num /= 100;
-                return num;
+    	        multi = num * 100;
+		        mRound = Math.round(multi);
+		        div = mRound / 100;
+		        return div;
             }
 
             /* creating total with 2 decimal places */
@@ -220,6 +168,15 @@
                     document.getElementById(selectarr[k]).onchange = function () {
                         merch[k] = parseInt(this.options[this.selectedIndex].text);
                         updateCart(merch);
+                    }
+                }
+
+                document.getElementById("purchase").onclick = function () {
+                    for(let m = 0; m < 4; m++) {
+                        if(merch[m] != 0) {
+                            alert("Thank You For Your Purchase!");
+                            break;
+                        }
                     }
                 }
 
