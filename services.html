@@ -3,163 +3,113 @@
     <head>
         <meta charset="utf-8">
         <title>Services</title>
+        <style></style>
+        <link rel="stylesheet" href="menustyle.css">
         <style type="text/css">
             body,html,li
             {
                 font-size: 18px;
                 font-family:Arvo,Helvetica, Arial, "sans-serif"
             }
-            #menu 
-            {
-                text-align: center; 
-                margin: 0;
-                width: 100%;
-                float: left;
-                background-color: #ffc311;
-            }
             body 
             {
                 background-color: #c6f1e7;
                 background-position: bottom;
             }
-            @media only screen and (min-device-width: 400px) 
-            {
-                body 
-                {
-                    background-image: url('eventastic.png'); 
-                    background-repeat: no-repeat;
-                    background-size: 800px;
-                    background-position: center;
-                }
-            }
-            .nobull 
-            {
-                list-style-type: none; 
-                text-align:center;
-                margin: 0px;
-                padding: 5px;
-                
-            }
-            li 
-            {
-                
-                display: inline; 
-                color: white;
-                padding:0px; 
-                margin:10px; 
-            }
-            li a
-            {
-                display: inline-block;
-                color: white;
-                text-align: center;
-                padding:30px;
-                text-decoration: none;
-            }
-            li a:hover 
-            {
-                background-color: #111;
-            }
-            .footer 
-            {
-                position: fixed;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                background-color: #ffc311;
-                color: white;
-                text-align: center;
-            }
+            
             h1 {
                 text-align: center;
-            }
-            h3 {
-
-                padding-left: 200px;
-                padding-right: 200px;
             }
             hr {
                 border: 2px solid #ffc311;
                 border-radius: 5px;
+                width: 90%;
             }
             .row {
               display: flex;
             }
             .column {
-                flex: 25%;
-                padding: 5px;
-            }
-            center {
-                padding: 80px 0;
+                flex: 33%;
             }
             img {
-                width: 60%;
-            }
-            #flowers {
-                padding-left: 100px;
-            }
-            #flowerstext {
-                padding-right: 250px;
+                width: 65%;
+                border-radius: 5px;
             }
         </style>
     </head>
     <body>
         <div id="menu">
             <ul class="nobull">
-                <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://www.Youtube.com/"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Order</a></li>
-                <li><a href="">Testimonials</a></li>
-                <li><a href="">Merch</a></li>
+                <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/about.html">About</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Menu</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Order</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Testimonials</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/merch.html">Merch</a></li>
             </ul>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1>Our Services</h1>
+
+        <hr>
+        <br/>
+        <div class="row">
+            <div class="column">
+                <center> 
+                    <img src="cleaning.jpg" alt="cleaning">
+                    <h1>Pet Cleaning</h1>
+                    <p>asdf</p>
+                </center>
+            </div>
+            <div class="column">
+                <center> 
+                    <img src="catering.jpg" alt="catering">
+                    <h1>DJ</h1>
+                    <p>asdf</p>
+                </center>
+
+            </div>
+            <div class="column">
+                <center> 
+                    <img src="flowers3.jpg" alt="flowers"  id="flowers">
+                    <h1>Photo</h1>
+                    <p>asdf</p>
+                </center>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="column">
+                <center> 
+                    <img src="cleaning.jpg" alt="cleaning">
+                    <h1>House Cleaning</h1>
+                    <p>asdf</p>
+                </center>
+            </div>
+            <div class="column">
+                <center> 
+                    <img src="catering.jpg" alt="catering">
+                    <h1>Catering</h1>
+                    <p>asdf</p>
+                </center>
+
+            </div>
+            <div class="column">
+                <center> 
+                    <img src="flowers3.jpg" alt="flowers"  id="flowers">
+                    <h1>Flowers</h1>
+                    <p>asdf</p>
+                </center>
+            </div>
+        </div>
+        <br>
+        <hr>
         
-        <br><br><br><br>
-        <h1>Here are some of our many services!</h1>
-
-        <hr>
-        <div class="row">
-            <div class="column">
-                <center> 
-                    <h1>We offer house cleaning!</h1>
-                </center>
-            </div>
-            <div class="column">
-                <img src="cleaning.jpg" alt="cleaning" style="max-width:100%;">
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="column">
-                <img src="flowers3.jpg" alt="flowers"  id="flowers" style="max-width:100%;">
-            </div>
-            <div class="column">
-                <center> 
-                    <h1 id="flowerstext">We sell flowers!</h1>
-                </center>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row">
-            <div class="column">
-                <center> 
-                    <h1>We have the best catering service!</h1>
-                </center>
-            </div>
-            <div class="column">
-                <img src="catering.jpg" alt="catering" style="max-width:100%;">
-            </div>
-        </div>
-
-        <br><br><br><br><br>
-        <footer class="footer">
-            <p>Contact the author: <a href="mailto:wxia02@tufts.edu">footer text</a></p>
-        </footer>
     </body>
 </html>
