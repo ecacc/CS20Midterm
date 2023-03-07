@@ -1,0 +1,285 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Order | Eventastic</title>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="menustyle.css">
+        <style type="text/css">
+
+        li
+        {
+            font-size: 18px;
+            font-family:Arvo,Helvetica, Arial, "sans-serif"
+        }
+            textarea {
+                resize: none
+            }
+
+            .radio {
+                margin-right: 20px
+            }
+
+            .required {
+                color:rgb(255, 0, 0)
+            }
+
+            .bookpage {
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                color:rgb(248, 231, 183);
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-bottom: 100px;
+                padding-top: 15px;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                padding-right: 10px;
+                background-color:rgb(112, 172, 176)
+            }
+
+            .bookpage:hover {
+                border:5px solid rgb(254, 195, 12);
+                padding-left: 10px;
+                padding-right: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px
+            }
+
+            h1 {
+                color:rgb(102, 105, 110);
+                margin-top: 20px;
+                text-shadow: 2px 2px 10px rgb(198, 240, 232)
+            }
+
+            h3 {
+                color:rgb(102, 105, 110);
+                text-shadow: 2px 2px 10px rgb(198, 240, 232)
+            }
+
+            body {
+                background-color:rgb(198, 240, 232)
+            }
+
+            .color {color: rgb(198, 240, 232); color: rgb(112, 172, 176); color: rgb(89, 96, 109); color: rgb(254, 195, 12)}
+            
+        </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+
+        <script>
+
+            function validate() {
+                submit = true;
+                var validateFields = ["firstName", "lastName", "street", "town", "zip", "email", "phone", "guests"];
+                for(let k = 0; k < validateFields.length; k++){
+                    if(document.getElementById(validateFields[k]).value == "") {
+                        document.getElementById(validateFields[k]).style.backgroundColor = "rgb(255, 0, 0)";
+                        submit = false;
+                    } else {
+                        document.getElementById(validateFields[k]).style.backgroundColor = "rgb(255, 255, 255)";
+                    }
+                }
+
+                var regExpPhone = /^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/;
+                var phone = document.getElementById("phone").value.match(regExpPhone);
+                if(!phone) {
+                    submit = false;
+                    alert("Enter a valid phone number");
+                    document.getElementById("phone").style.backgroundColor = "rgb(255, 0, 0)";
+                } else {
+                    document.getElementById("phone").style.backgroundColor = "rgb(255, 255, 255)";
+                }
+
+                var regExpEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                var email = document.getElementById("email").value.match(regExpEmail);
+                if(!email) {
+                    submit = false;
+                    alert("Enter a valid email address");
+                    document.getElementById("email").style.backgroundColor = "rgb(255, 0, 0)";
+                } else {
+                    document.getElementById("email").style.backgroundColor = "rgb(255, 255, 255)";
+                }
+
+                var guests = document.getElementById("guests").value.match(/^\d*$/);
+                if(!guests) {
+                    submit = false;
+                    alert("Enter a valid number of guests");
+                    document.getElementById("guests").style.backgroundColor = "rgb(255, 0, 0)";
+                } else {
+                    document.getElementById("guests").style.backgroundColor = "rgb(255, 255, 255)";
+                }
+
+
+                var zip = document.getElementById("zip").value.match(/^[0-9]{5}(?:-[0-9]{4})?$/);
+
+                if(!zip) {
+                    submit = false;
+                    alert("Enter a valid ZIP code");
+                    document.getElementById("zip").style.backgroundColor = "rgb(255, 0, 0)";
+                } else {
+                    document.getElementById("zip").style.backgroundColor = "rgb(255, 255, 255)";
+                }
+
+                var days = document.getElementById("daySelect")
+                if(days.options[days.selectedIndex].value == 0) {
+                    submit = false;
+                    alert("Choose a valid day");
+                    document.getElementById("daySelect").style.backgroundColor = "rgb(255, 0, 0)";
+                } else {
+                    document.getElementById("daySelect").style.backgroundColor = "rgb(255, 255, 255)";
+                }
+                var months = document.getElementById("monthSelect")
+                if(months.options[months.selectedIndex].id == "notSelected") {
+                    submit = false;
+                    alert("Choose a valid month");
+                    document.getElementById("monthSelect").style.backgroundColor = "rgb(255, 0, 0)";
+                } else {
+                    document.getElementById("monthSelect").style.backgroundColor = "rgb(255, 255, 255)";
+                }
+                var years = document.getElementById("yearSelect")
+                if(years.options[years.selectedIndex].id == "notSelected") {
+                    submit = false;
+                    alert("Choose a valid year");
+                    document.getElementById("yearSelect").style.backgroundColor = "rgb(255, 0, 0)";
+                } else {
+                    document.getElementById("yearSelect").style.backgroundColor = "rgb(255, 255, 255)";
+                }
+
+                // var radio = ["choice1", "choice2", "choice3", "choice4", "choice5", "choice6"];
+                radioChecked = false;
+                for(let r = 0; r < 6; r++) {
+                    if(document.getElementsByName("choice")[r].checked) {
+                        radioChecked = true;
+                    }
+                }
+                if(radioChecked == false) {
+                    submit = false;
+                    alert("Choose a Type of Event");
+                }
+
+                selectChecked = false;
+                for(let s = 1; s < 7; s++) {
+                    if(document.getElementsByName("choice" + s)[0].checked) {
+                        selectChecked = true;
+                    }
+                }
+                if(selectChecked == false) {
+                    submit = false;
+                    alert("Choose at least one service");
+                }
+                if(submit) {
+                    alert("Thank You For Choosing Eventastic!");
+                }
+                return submit;
+            }
+        
+            window.onload=function() {
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <!--header-->
+        <div id="menu">
+            <ul class="nobull">
+                <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://www.Youtube.com/"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Order</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Merch</a></li>
+            </ul>
+        </div>
+
+        <br /> <br /> <br /> <br /> <br /> <br /> <br />
+
+        <div class="bookpage">
+        <h1>Book Your Event With Eventastic Today!</h1>
+        <form onsubmit="return validate()">
+            <label>First Name<text class="required">*</text>: </label> <input type="text" id="firstName" value="">
+            <br />
+            <label>Last Name<text class="required">*</text>: </label> <input type="text" id="lastName" value="">
+            <br /> <br />
+            <label>Address of Event<text class="required">*</text>: </label> <br />
+            <label>Street: </label> <input type="text" id="street" value=""> <br />
+            <label>Town: </label> <input type="text" id="town"> <br />
+            <label>State: </label>
+            <select id="stateSelect" size='1'>
+                <option disabled selected value> Select an Option </option>
+                <option value="0">Connecticut</option>
+                <option value="1">Massachusetts</option>
+                <option value="2">New Hampshire</option>
+                <option value="3">New York</option>
+                <option value="4">Rhode Island</option>
+                <option value="5">Vermont</option>
+            </select> <br />
+            <label>ZIP: </label> <input type="text" id="zip"> <br /> <br />
+            <label>Email<text class="required">*</text>: </label> <input type="text" id="email"> <br />
+            <label>Phone (XXX-XXX-XXXX)<text class="required">*</text>: </label> <input type="text" id="phone"> <br /> <br />
+            <label>Date of Event<text class="required">*</text>: </label> <br />
+            <label>Day: </label>
+            <select id="daySelect" size='1'>
+                <option disabled selected value value="0"> Select an Option </option>
+                <script>
+                    for (let i = 1; i < 32; i++) {
+                        document.write("<option value='" + i + "'>" + i + "</option>");
+                    }
+                </script>
+            </select> <br />
+            <label>Month: </label>
+            <select id="monthSelect" size='1'>
+                <option disabled selected value id="notSelected"> Select an Option </option>
+                <script>
+                    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    for (let j = 0; j < 12; j++) {
+                        document.write("<option value='" + j + "'>" + months[j] + "</option>");
+                    }
+                </script>
+            </select> <br />
+            <label>Year: </label>
+            <select id="yearSelect" size='1'>
+                <option disabled selected value id="notSelected"> Select an Option </option>
+                <option value="0">2023</option>
+                <option value="1">2024</option>
+                <option value="2">2025</option>
+                <option value="3">2026</option>
+                <option value="4">2027</option>
+                <option value="5">2028</option>
+            </select> <br /> <br />
+            <label>Type of Event<text class="required">*</text>: </label> <br />
+            <label>Business Event: </label> <input type="radio" name='choice' class="radio">
+            <label>Dinner Party: </label> <input type="radio" name='choice' class="radio">
+            <label>Holiday Party: </label> <input type="radio" name='choice' class="radio">
+            <label>Wedding: </label> <input type="radio" name='choice' class="radio">
+            <label>Birthday Party: </label> <input type="radio" name='choice' class="radio">
+            <label>Other: </label> <input type="radio" name='choice' class="radio"> <br /> <br />
+            <label>If other, explain your event here: </label> <br />
+            <br /> <textarea rows="5" cols="60"></textarea> <br /> <br />
+            <label>Services Needed<text class="required">*</text>: </label> <br />
+            <input type="checkbox" name='choice1'>Planning <br />
+            <input type="checkbox" name='choice2'>Decorations <br />
+    	    <input type="checkbox" name='choice3'>Cleaning <br />
+		    <input type="checkbox" name='choice4'>Catering <br />
+		    <input type="checkbox" name='choice5'>Hosts <br />
+            <input type="checkbox" name='choice6'>Entertainment <br /> <br />
+            <label>Amount of Guests<text class="required">*</text>: </label> <input type="text" id="guests"> <br /> <br />
+            <input type='submit' value='Make Your Event Happen!' id='submit' class='submit'>
+        </form>
+
+        <h3>Once your form is submitted we review it and get back to you in less than 24 hours!</h3>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+        <p>Contact the author: <a href="mailto:wxia02@tufts.edu">footer text</a></p>
+    </footer>
+
+
+    </body>
+</html>
