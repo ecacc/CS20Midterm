@@ -13,7 +13,7 @@
 
             /* page specific css */
             body {
-                background-color: rgb(112, 172, 176)
+                background-color: rgb(198, 240, 232)
             }
             .merchpage {
                 width: 100%; content: "";
@@ -67,6 +67,9 @@
                 margin-bottom: 10px;
                 color:rgb(198, 240, 232)
             }
+            .cartTitle {
+                color: rgb(112, 172, 176);
+            }
             .price {
                 font-size: 20px;
                 text-align: center
@@ -101,7 +104,7 @@
                 background-color:rgb(248, 231, 183)
             }
             .merchIMG:hover {
-                background-color:rgb(198, 240, 232)
+                background-color:rgb(112, 172, 176)
             }
 
             h1 {
@@ -113,7 +116,8 @@
             }
 
             .h3Merch {
-                font-size: 25px
+                font-size: 25px;
+                color: rgb(112, 172, 176);
             }
 
             /* just to keep track of all of the colors */
@@ -294,7 +298,7 @@
             </div>
             <div class="cart">
                 <form name="cart">
-                    <h3>Your Cart<img src="shoppingcart.png" width="30" /></h3>
+                    <h3 class="cartTitle">Your Cart<img src="shoppingcart.png" width="30" /></h3>
                     <textarea class='cartText' id='cartText' READONLY >
 
     0 x T-Shirt . . . . . . . . . . . . . . . . . . . . $0.00      
@@ -319,7 +323,7 @@
             </div>
         </div>
 
-        <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br /> <br /> <br />
 
         <!--footer-->
         <footer class="footer">
