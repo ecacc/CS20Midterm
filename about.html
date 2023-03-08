@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About</title>
+    <title>About | Eventastic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="menustyle.css" />
     <style type="text/css">
@@ -13,7 +13,7 @@
 
         h1 {
             text-align: center;
-            padding-top: 120px;
+            /* padding-top: 120px; */
         }
 
         h2 {
@@ -57,14 +57,18 @@
         /* Mission Section */
         .about-mission {
             display: flex;
+            /* width: 950px; */
+            height: 300px;
             justify-content: center;
+            align-items: center;
             padding: 30px;
-            margin-bottom: 50px;
+            /* margin: 0px 200px 50px 200px; */
+            /* margin-bottom: 50px; */
             background-color: #70acb0;
         }
 
         .about-mission p {
-            width: 80%;
+            width: 800px;
             margin: 50px 200px;
             text-align: center;
             font-size: 25px;
@@ -73,24 +77,28 @@
         /* Values Section */
         .about-values {
             display: flex;
-            margin: 0px 200px 50px 200px;
+            flex-wrap: wrap;
+            width: 1200px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            /* margin: 0px 200px 50px 200px; */
         }
 
-        #about-values-image {
-            width: 40%;
-            padding-right: 20px;
+        .value-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            margin: 20px;
+            padding: 30px;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            background-color: #59606d;
         }
 
-        #about-values-content {
-            width: 60%;
-            padding-left: 20px;
-        }
-
-        #about-values-content p {
-            width: 80%;
-        }
-
-       
 
     </style>
 </head>
@@ -99,16 +107,17 @@
 
     <div id="menu">
         <ul class="nobull">
-            <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://www.Youtube.com/"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Order</a></li>
-            <li><a href="">Testimonials</a></li>
-            <li><a href="">Merch</a></li>
+            <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/about.html">About</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Menu</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Order</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Testimonials</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/merch.html">Merch</a></li>
         </ul>
     </div>
+    <br /><br /><br /><br /><br /><br />
 
     <h1>About Eventastic</h1>
 
@@ -137,6 +146,8 @@
 
     </section>
 
+    <br /><br />
+
     <section class="about-mission">
         <p>At Eventastic, we provide only the best event planning and services 
             to our clients. From catering to decorating to cleanup, we'll be 
@@ -144,24 +155,20 @@
             event goes off without a hitch.</p>
     </section>
 
+    <br /><br />
     <h2>Our Values</h2>
     <section class="about-values">
-        <div id="about-values-image">
-            <p>[image placeholder]</p>
-        </div>
 
-        <div id="about-values-content">
-            <p>At Eventastic, we value:</p>
-            <ul>
-                <li>Quality products</li>
-                <li>Efficient service</li>
-                <li>Clear and transparent communication</li>
-                <li>Client-informed decision-making</li>
-                <li>Striving for excellence in everything we do</li>
-            </ul>
-        </div>
+        <div class="value-box"><img src="val1.jpg" href="icon of food"/> <p>Quality Products</p></div>
+        <div class="value-box"><img src="val2.jpg" href="icon of laptop"/> <p>Efficient Service</p></div>
+        <div class="value-box"><img src="val3.jpg" href="icon of magnifying glass"/> <p>Transparency</p></div>
+        <div class="value-box"><img src="val5.jpg" href="icon of paper"/> <p>Reliable Communication</p></div>
+        <div class="value-box"><img src="val4.jpg" href="icon of phone"/> <p>Informed Decision Making</p></div>
+        <div class="value-box"><img src="val6.jpg" href="icon of a handshake"/> <p>Organizational Excellence</p></div>
         
     </section>
+
+    <br /> <br /> <br /> <br />
 
     <footer class="footer">
         <p>Contact the author: <a href="mailto:wxia02@tufts.edu">footer text</a></p>
