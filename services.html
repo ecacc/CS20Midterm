@@ -26,14 +26,44 @@
                 width: 90%;
             }
             .row {
-              display: flex;
+                display: flex;
             }
             .column {
                 flex: 33%;
             }
+            .column p {
+                padding: 0px 80px;
+            }
             img {
                 width: 65%;
                 border-radius: 5px;
+            }
+            @media (max-width: 1000px) {
+                .column h1 {
+                    font-size: 25px;
+                }
+                .column p {
+                    font-size: 12px;
+                    padding: 0px 65px;
+                }
+            }
+            @media (max-width: 800px) {
+                .column p {
+                    font-size: 10px;
+                    padding: 0px 50px;
+                }
+            }
+            @media (max-width: 600px) {
+                .column h1 {
+                    font-size: 20px;
+                }
+                .column p {
+                    font-size: 15px;
+                    padding: 0px 80px;
+                }
+                .row {
+                    display: inline-block;
+                }
             }
         </style>
     </head>
@@ -64,14 +94,14 @@
                 <center> 
                     <img src="planning.jpg" alt="planning">
                     <h1>Planning</h1>
-                    <p>asdf</p>
+                    <p>Have an upcoming birthday and don't know what to do? Let us help you plan out your party!</p>
                 </center>
             </div>
             <div class="column">
                 <center> 
                     <img src="entertainment.jpg" alt="entertainment">
                     <h1>Entertainment</h1>
-                    <p>asdf</p>
+                    <p>Searching for a last minute DJ? Look no further! We have some of the best DJs in the country!</p>
                 </center>
 
             </div>
@@ -79,7 +109,7 @@
                 <center> 
                     <img src="host.jpg" alt="host">
                     <h1>Host</h1>
-                    <p>asdf</p>
+                    <p>Tired of hosting your own parties and dinners? We can provide that for you!</p>
                 </center>
             </div>
         </div>
@@ -89,14 +119,14 @@
                 <center> 
                     <img src="cleaning.jpg" alt="cleaning">
                     <h1>House Cleaning</h1>
-                    <p>asdf</p>
+                    <p>Haven't cleaned in a while and feeling lazy? We can send over our best cleaners!</p>
                 </center>
             </div>
             <div class="column">
                 <center> 
                     <img src="catering.jpg" alt="catering">
                     <h1>Catering</h1>
-                    <p>asdf</p>
+                    <p>Need catering for your party? We have a top notch catering service that will meet your every need!</p>
                 </center>
 
             </div>
@@ -104,7 +134,7 @@
                 <center> 
                     <img src="decoration.jpg" alt="decoration">
                     <h1>Decoration</h1>
-                    <p>asdf</p>
+                    <p>Got the planning done but need decorations? We got  banners, balloons, flowers, and much more!</p>
                 </center>
             </div>
         </div>
