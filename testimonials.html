@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testimonials | Eventastic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menustyle.css" />
+    <style type="text/css">
+
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #c6f0e8;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+
+        }
+
+        .testimonial-box {
+            display: flex;
+            flex-wrap: wrap;
+            /* height: 300px; */
+            width: 1000px;
+            margin: auto;
+            margin-top: 40px;
+            background-color: #70acb0;
+        }
+
+        .img-testimonial {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            width: 40%;
+        }
+
+        .quote-testimonial {
+            font-size: 24px;
+            text-align: center;
+            margin: 20px;
+            padding: 30px;
+            width: 40%;
+        }
+
+        .quote-testimonial p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* responsiveness */
+        @media(max-width: 1100px) {
+            .testimonial-box {
+                display: block;
+                width: 600px;
+            }
+
+            .img-testimonial {
+                width: 88%;
+                margin-bottom: 0px;
+                padding-top: 40px;
+            }
+
+            .img-testimonial img {
+                width: 300px;
+                height: 250px;
+                object-fit: cover;
+            }
+
+            .quote-testimonial {
+                width: 80%;
+            }
+        }
+
+        @media(max-width: 700px) {
+            .quote-testimonial {
+                font-size: 20px;
+                width: 75%;
+                text-align: justify;
+            }
+
+            .quote-testimonial p {
+                font-size: 16px;
+            }
+            .testimonial-box {
+                width: 400px;
+            }
+        }
+
+        @media(max-width: 400px) {
+            .testimonial-box {
+                width: 350px;
+            }
+            .img-testimonial {
+                width: 83%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="menu">
+        <ul class="nobull">
+            <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/about.html">About</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Menu</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/order.html">Order</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/testimonials.html">Testimonials</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/merch.html">Merch</a></li>
+        </ul>
+    </div>
+    <br /><br /><br /><br /><br /><br />
+
+    <h1>Testimonials</h1>
+    <h3>Hear directly from our customers about our amazing services.</h3>
+
+    <div id="t1"></div>
+    <div id="t2"></div>
+    <div id="t3"></div>
+    <div id="t4"></div>
+
+    <script>
+        // makeTestimonial : Creates the testimonial content and sets it to the
+        //                   given div
+        //            args : box, div to place testimonial + image name
+        //                   quote, what the person talked about
+        //                   source, who said the quote
+        function makeTestimonial(box,  quote, source) {
+            b = document.getElementById(box);
+
+            let content = "<section class='testimonial-box'><div class='img-testimonial'>";
+            content += "<img src='" + box + ".jpg' /></div>";
+            content += "<div class='quote-testimonial'><em>" + quote + "</em><br /><br />";
+            content += "<p>— " + source + "</p></div></section>";
+            
+            b.innerHTML = content;
+        }
+        
+        let t1_text = '"Eventastic is the best event service I have ever used! \
+                        All the people I spoke to were kind and professional \
+                        They were able to be flexible about their plans when my dinner \
+                        party guest list doubled in size at the last minute which shows \
+                        how amazing they are at their work. Highly recommend!"';
+        
+        let t2_text = '"At my father\'s birthday party, we hired Eventastic\'s catering \
+                        services for the evening and I was so impressed. All the guests \
+                        were raving about the food and they were incredibly accomodating \
+                        to the many dietary restrictions and preferences our group had. \
+                        I still dream of the blueberry cheesecake from that evening!"';
+        
+        let t3_text = '"When I realized my cousin was a terrible DJ, I turned to Eventastic \
+                        to help me find a new person to run the music for my high school\'s \
+                        homecoming dance. Our DJ Rob was fantastic and all the kids seemed \
+                        to love the music he played! They were quick to respond and get me \
+                        set up with Rob on such short notice."';
+        
+        let t4_text = '"I have zero eye for aesthetics so for my company\'s holiday party \
+                        I knew I had to hire someone to help me so I found Eventastic. \
+                        They made the venue gorgeous and elegant but still felt very much \
+                        on brand for our work. It was such a memorable night and I can\'t \
+                        thank Eventastic enough for their help."';
+        
+        makeTestimonial("t1", t1_text, "John Johnson, CEO of Johnson & Johnson");
+        makeTestimonial("t2", t2_text, "Annie the Bunny, CEO of Annie's Mac and Cheese");
+        makeTestimonial("t3", t3_text, "Katherine McElroy, teacher at South High School");
+        makeTestimonial("t4", t4_text, "Francis Parker, Senior Logistics at Cumberland Farms");
+
+    </script>    
+
+    <br /><br /><br /><br /><br /><br />
+
+    <footer class="footer">
+        <p>Contact the author: <a href="mailto:wxia02@tufts.edu">footer text</a></p>
+    </footer>
+    
+</body>
+
+</html>
