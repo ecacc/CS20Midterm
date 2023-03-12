@@ -120,8 +120,46 @@
                 color: rgb(112, 172, 176);
             }
 
+            .logoPic {
+                margin-top: 125px
+            }
+
+            .priceL {
+                margin-left: 140px
+            }
+
             /* just to keep track of all of the colors */
             .colors {color: rgb(198, 240, 232); color: rgb(112, 172, 176); color: rgb(89, 96, 109); color: rgb(254, 195, 12)}
+
+            @media (max-width: 1400px) { .merchIMG {width: 375px} .cartText {width: 450px}}
+            @media (max-width: 1377px) { .logoPic {margin-top: 100px}}
+            @media (max-width: 1365px) { .cartText {font-size: 21px}}
+            @media (max-width: 1344px) { .logoPic {width: 350px}}
+            @media (max-width: 1340px) { .merchIMG {width: 350px} .cartText {width: 425px} .cart {margin-right: 5px}}
+            @media (max-width: 1280px) { .cartTitle {font-size: 30px; margin-top: 5px} .cartText {height: 375px}}
+            @media (max-width: 1275px) { .cartText {font-size: 20px}}
+            @media (max-width: 1270px) { .merchIMG {width: 325px} .cartText {width: 400px} h2 {font-size: 22px}}
+            @media (max-width: 1200px) { .priceL {margin-left: 110px}}
+            @media (max-width: 1180px) { .cartText {height: 330px}}
+            @media (max-width: 1190px) { .merchIMG {width: 300px} .cartText {width: 375px} .cartText {font-size: 18px} .logoPic {width: 300px} h2 {font-size: 20px}}
+            @media (max-width: 1140px) { .merchIMG {width: 275px} .cartText {width: 350px; height: 350px} .cartText {font-size: 17px} .priceL {margin-left: 80px} h3 {font-size: 30px} .logoPic {width: 275px} h2 {font-size: 19px; padding-left: 0px}}
+            @media (max-width: 1070px) { .merchIMG {width: 250px} .cartText {width: 325px; height: 290px} .cartText {font-size: 16px} .priceL {margin-left: 60px} .cart {margin-right: 0px} .logoPic {width: 250px}}
+            @media (max-width: 975px) { .merchIMG {width: 225px} .cartText {width: 300px; height: 270px} .cartText {font-size: 15px} .priceL {margin-left: 50px} .price {font-size: 15px} .logoPic {width: 225px; margin-top: 50px} h2 {font-size: 17px}}
+            @media (max-width: 900px) { .merchIMG {width: 275px} .price {font-size: 17} h2 {font-size: 16px} .merch {float: none; width: 80%; margin: 0 auto} .cart{float: none; width: 80%; margin: 0 auto; margin-top: 50px} .cartArea {float: left; margin-right: 100px} .logoDiv {float: left}}
+            @media (max-width: 870px) {.logoPic {width: 200px} .cartArea {margin-right: 70px}}
+            @media (max-width: 830px) { .merchIMG {width: 250px} .cartText {font-size: 14px} h1 {font-size: 40px} .h3Merch {font-size: 20px} .logoPic {width: 175px} .cartArea {margin-right: 50px}}
+            @media (max-width: 800px) { .cartText {width: 275px; font-size: 14px} h2 {font-size: 14px}}
+            @media (max-width: 760px) { .merchIMG {width: 225px} h1 {font-size: 40px} .h3Merch {font-size: 20px}}
+            @media (max-width: 730px) { .logoPic {width: 150px; margin-top: 75px} .cartText {width: 260px; font-size: 13px}}
+            @media (max-width: 710px) { .cartArea {margin-right: 30px}}
+            @media (max-width: 700px) { .merchIMG {width: 200px}}
+            @media (max-width: 685px) { .cartArea {float: none; width: 50%; margin: 0 auto} .logoDiv {float: none; width: 50%; margin: 0 auto} .logoPic {width: 300px;} h2 {font-size: 25px; text-align: center; padding-left: 60px}}
+            @media (max-width: 635px) { .merch {width: 90%}}
+            @media (max-width: 600px) { h2 {padding-left: 80px} .cartArea {padding-left: 0px;}}
+            @media (max-width: 570px) { .merchIMG {width: 175px} .price {font-size: 15px} .priceL {margin-left: 30px} .cartArea {margin-left: 50px} .logoDiv {margin-left: 50px}}
+            @media (max-width: 515px) { .merch {width: 100%}}
+
+            @media (max-width: 420px) { .merchIMG {width: 125px} .price {font-size: 13px} .priceL {margin-left: 5px} .cartTitle {font-size: 25px} .cartImg {width: 20px}}
         </style>
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"
@@ -241,8 +279,8 @@
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        $23.00</p>               
+                        <label class="priceL">$23.00</label>
+                    </p>               
                     </div>
                     <div class="crewneck">
                         <h3>Crew Neck</h3>
@@ -257,8 +295,8 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            $45.00</p>
+                            <label class="priceL">$45.00</label>
+                        </p>
                     </div>
                 </div>
                 <div class="secondrow">
@@ -275,8 +313,8 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            $15.00</p>
+                            <label class="priceL">$15.00</label>
+                        </p>
                     </div>
                     <div class="pillow">
                         <h3>Pillow</h3>
@@ -291,14 +329,15 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                            $21.00</p>
+                            <label class="priceL">$21.00</label>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="cart">
+                <div class="cartArea">
                 <form name="cart">
-                    <h3 class="cartTitle">Your Cart<img src="shoppingcart.png" width="30" /></h3>
+                    <h3 class="cartTitle">Your Cart<img src="shoppingcart.png" class="cartImg" width="30" /></h3>
                     <textarea class='cartText' id='cartText' READONLY >
 
     0 x T-Shirt . . . . . . . . . . . . . . . . . . . . $0.00      
@@ -317,9 +356,11 @@
                     </textarea><br /> <br />
                     <input type='submit' value='Purchase' id='purchase' class='purchase'>
                 </form>
-                <br /> <br /> <br /> <br /> <br /> <br />
-                <img src="eventastic.png" width="400" />
-                <h2>Thank You for Supporting Eventastic!</h2>
+                </div>
+                <div class="logoDiv">
+                    <img src="eventastic.png" width="400" class="logoPic"/>
+                    <h2>Thank You for Supporting Eventastic!</h2>
+                </div>
             </div>
         </div>
 
