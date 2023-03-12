@@ -69,6 +69,32 @@
         </style>
     </head>
     <body>
+        <div id="hamburger">
+            <ul class="nobull2">
+                <li style="float: left;"><a  href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;"></a></li>
+                
+                <li style="float: right; padding-right: 20px; font-size: 30px;" onclick="showMobileMenu()"><a>☰</a></li>
+            </ul>
+        </div>
+        <script>
+            var menushown = false;
+            function showMobileMenu()
+            {
+                var menu = document.getElementById("menu");
+                if(menushown == false)
+                {
+                    menu.style.display = "block";
+                    menushown = true;
+                }
+                else
+                {
+                    menu.style.display = "none";
+                    menushown = false;
+                }
+    
+            }
+        </script>
+    
         <div id="menu">
             <ul class="nobull">
                 <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
@@ -93,14 +119,14 @@
             <div class="column">
                 <center> 
                     <img src="planning.jpg" alt="planning">
-                    <h1>Planning</h1>
+                    <h2>Planning</h2>
                     <p>Have an upcoming birthday and don't know what to do? Let us help you plan out your party!</p>
                 </center>
             </div>
             <div class="column">
                 <center> 
                     <img src="entertainment.jpg" alt="entertainment">
-                    <h1>Entertainment</h1>
+                    <h2>Entertainment</h2>
                     <p>Searching for a last minute DJ? Look no further! We have some of the best DJs in the country!</p>
                 </center>
 
@@ -108,7 +134,7 @@
             <div class="column">
                 <center> 
                     <img src="host.jpg" alt="host">
-                    <h1>Host</h1>
+                    <h2>Host</h2>
                     <p>Tired of hosting your own parties and dinners? We can provide that for you!</p>
                 </center>
             </div>
@@ -118,14 +144,14 @@
             <div class="column">
                 <center> 
                     <img src="cleaning.jpg" alt="cleaning">
-                    <h1>House Cleaning</h1>
+                    <h2>House Cleaning</h2>
                     <p>Haven't cleaned in a while and feeling lazy? We can send over our best cleaners!</p>
                 </center>
             </div>
             <div class="column">
                 <center> 
                     <img src="catering.jpg" alt="catering">
-                    <h1>Catering</h1>
+                    <h2>Catering</h2>
                     <p>Need catering for your party? We have a top notch catering service that will meet your every need!</p>
                 </center>
 
@@ -133,7 +159,7 @@
             <div class="column">
                 <center> 
                     <img src="decoration.jpg" alt="decoration">
-                    <h1>Decoration</h1>
+                    <h2>Decoration</h2>
                     <p>Got the planning done but need decorations? We got  banners, balloons, flowers, and much more!</p>
                 </center>
             </div>
