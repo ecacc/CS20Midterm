@@ -25,10 +25,10 @@
             padding-top: 20px;
             margin-left: 150px;
             margin-bottom: 60px;
-            /* margin: 0px 0px 50px 200px; */
         }
 
         #about-story-content {
+            margin-right: 150px;
             width: 60%;
             padding-bottom: 20px;
         }
@@ -38,7 +38,6 @@
         }
 
         #about-story-content p {
-            width: 80%;
             font-size: 18px;
             text-align: justify;
         }
@@ -57,25 +56,19 @@
             background-image: url("about-story-img.jpg");
             background-size: cover;
             margin-right: 90px;
+            margin-bottom: 20px;
         }
 
-        /* #about-story-image img {
-            width: 350px;
-            /* height: 300px;
-            border: 20px solid #70acb0;
-            border-radius: 100%; */
-        /* } */
+        #about-story-image img {
+            display: none;
+            width: 600px;
+        }
 
         /* Mission Section */
         .about-mission {
             display: block;
-            /* width: 950px; */
             height: auto;
-            /* justify-content: center;
-            align-items: center; */
             padding: 70px 30px 30px 30px;
-            /* margin: 0px 200px 50px 200px; */
-            /* margin-bottom: 50px; */
             background-color: #70acb0;
         }
 
@@ -105,7 +98,6 @@
             align-items: center;
             justify-content: center;
             margin: auto;
-            /* margin: 0px 200px 50px 200px; */
         }
 
         .value-box {
@@ -122,6 +114,92 @@
             background-color: #59606d;
         }
 
+        /* responsiveness */
+        @media(max-width: 1300px) {
+            .about-backstory {
+                margin-right: 75px;
+                margin-left: 40px;
+            }
+            #about-story-image {
+                align-items: start;
+                width: 50%;
+            }
+            #about-story-content {
+                margin-right: 0px;
+                margin-left: 10px;
+                width: 60%;
+            }
+            .about-values {
+                margin-left: 10px;
+                margin-right: 10px;
+                width: auto;
+            }
+            .value-box {
+                padding: 15px;
+            }
+        }
+
+        @media(max-width: 1100px) {
+            #about-story-image {
+                background-image: none;
+                justify-content: center;
+                align-items: center;
+            }
+            #about-story-image img {
+                display: flex;
+                height: 400px;
+                width: 400px;
+                object-fit: cover;
+            }
+        }
+
+        @media(max-width: 1000px) {
+            .about-backstory {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                width: 80%;
+                padding-bottom: 30px;
+            }
+            #about-story-image  {
+                display: none;
+            }
+
+            #about-story-image img {
+                display: none;
+            }
+            #about-story-content {
+                display: block;
+                justify-content: center;
+                margin: 0px;
+                width: 100%;
+            }
+            #about-story-content h2 {
+                text-align: center;
+            }
+        }
+
+        @media(max-width: 950px) {
+            .about-mission div p {
+                width: 500px;
+                margin: 50px 50px;
+            }
+        }
+
+        @media(max-width: 700px) {
+            .value-box {
+                padding: 8px;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .about-mission div p {
+                text-align: justify;
+                font-size: 20px;
+            }
+        }
+
 
     </style>
 </head>
@@ -135,8 +213,8 @@
             <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Menu</a></li>
             <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
             <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
-            <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Order</a></li>
-            <li><a href="https://ecacc.github.io/CS20Midterm/home.html">Testimonials</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/order.html">Order</a></li>
+            <li><a href="https://ecacc.github.io/CS20Midterm/testimonials.html">Testimonials</a></li>
             <li><a href="https://ecacc.github.io/CS20Midterm/merch.html">Merch</a></li>
         </ul>
     </div>
@@ -148,7 +226,7 @@
     <section class="about-backstory">
 
         <div id="about-story-image">
-            <!-- <img src="about-story-img.jpg" alt="A dinner spread" /> -->
+            <img src="about-story-img.jpg" alt="A dinner spread" />
         </div>
         <div id="about-story-content">
             <h2>Our Story</h2>
