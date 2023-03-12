@@ -1,3 +1,14 @@
+
+#hamburger
+{
+    display: none;
+    width:100%;
+    text-align: center;
+    background-color: #ffc311;
+    margin: 0;
+    float: left;
+}
+
 #menu 
 {
     text-align: center; 
@@ -29,16 +40,42 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+.nobull2
+{
+    list-style-type: none; 
+    text-align:center;
+    margin: 0px;
+    padding: 5px;
+}
+.nobull2 li 
+{
+    align-items: center;
+    display: inline; 
+    color: white;
+    height: 80px;
+    line-height: 80px;
+}
+
+
 @media screen and (max-width: 600px)
 {
     .nobull li a
     {
         display: block;
-        padding: 8px;
+        padding: 30px;
     }
     .nobull li img
     {
         display: none;
+    }
+    #menu
+    {
+        display:none;
+    }
+    #hamburger
+    {
+        display:block;
     }
 }
 .nobull li a:hover 
@@ -68,4 +105,15 @@ h1 {
 h2 {
     color:rgb(112, 172, 176)
 }
+
+
+
+
+
+
+
+
+
+
+
 

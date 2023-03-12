@@ -67,9 +67,16 @@ body
     <div id="hamburger">
         <ul class="nobull2">
             <li style="float: left;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
-            <li
+            <li style="float: right; padding-right: 20px; font-size: 30px;" onclick="showMobileMenu()">☰</li>
         </ul>
     </div>
+    <script>
+        function showMobileMenu()
+        {
+            var menu = document.getElementById("menu");
+            menu.style.display = "block";
+        }
+    </script>
 
     <div id="menu">
         <ul class="nobull">
