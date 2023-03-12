@@ -61,20 +61,33 @@ body
 
     });
 </script>
+<link rel="icon" href="logo.png">
 </head>
 <h1 style="display: none">Eventastic Catering</h1>
 <body>
     <div id="hamburger">
         <ul class="nobull2">
-            <li style="float: left;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
-            <li style="float: right; padding-right: 20px; font-size: 30px;" onclick="showMobileMenu()">☰</li>
+            <li style="float: left;"><a  href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;"></a></li>
+            
+            <li style="float: right; padding-right: 20px; font-size: 30px;" onclick="showMobileMenu()"><a>☰</a></li>
         </ul>
     </div>
     <script>
+        var menushown = false;
         function showMobileMenu()
         {
             var menu = document.getElementById("menu");
-            menu.style.display = "block";
+            if(menushown == false)
+            {
+                menu.style.display = "block";
+                menushown = true;
+            }
+            else
+            {
+                menu.style.display = "none";
+                menushown = false;
+            }
+
         }
     </script>
 
