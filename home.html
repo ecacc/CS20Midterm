@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Eventastic homepage</title>
+<title>Home | Eventastic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Eventastic Catering Service">
 <meta name="keywords" content="Catering, Cleaning, Flowers, Events, Event Planning, Service">
@@ -11,25 +11,16 @@ body,html,li,description
     font-size: 18px;
     font-family:Arvo,Helvetica, Arial, "sans-serif"
 }
+
 body 
 {
-    background-image: url('eventastic_banner.png');
-    background-repeat: no-repeat; 
+    background-image: url('eventastic.png'); 
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: center 85px;
     background-color: #c6f1e7;
-    background-position: bottom;
 }
 
-@media only screen and (min-device-width: 400px) 
-{
-    body 
-    {
-        background-image: url('eventastic.png'); 
-        background-repeat: no-repeat;
-        background-size: 800px;
-        background-position: center 85px;
-    }
-    
-}
 #why
 {
     text-align: center;
@@ -47,6 +38,21 @@ body
     padding:0px; 
     margin:10px;
 }
+
+@media screen and (max-width: 600px)
+{
+    body
+    {
+        background-image: url('eventastic.png');
+        background-position: center 220px;
+        background-size: 500px;
+    }
+    .reviews li 
+    {
+        display: block;
+    }
+}
+    
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -74,9 +80,9 @@ body
     <br><br>
     <div id="why" style="display: none;">
     <ul class = "reviews">
-        <li><strong> &nbsp &nbsp  &nbsp &nbsp Rated 5/5 on Yelp</strong></li>
-        <li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</li>
-        <li><strong> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Rated 5/5 on Google Reviews</strong></li><br><br>
+        <li><strong>Rated 5/5 on Yelp</strong></li>
+        <li>&nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </li>
+        <li><strong>Rated 5/5 on Google Reviews</strong></li><br><br>
         <li><img src="yelp_5.png"style="width:400px;height:200px"></li>
         <li><img src="google_5.png"style="width:400px;height:200px"></li>
     </ul>
