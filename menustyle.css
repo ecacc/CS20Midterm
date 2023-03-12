@@ -33,6 +33,7 @@
     .nobull li a
     {
         display: block;
+        padding: 8px;
     }
     .nobull li img
     {
