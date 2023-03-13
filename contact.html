@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Contact | Eventastic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name = "keywords" content = "Contact, Meet, experienced, email" />
         <link rel="icon" href="logo.png">
         <link rel="stylesheet" href="menustyle.css">
@@ -29,7 +30,7 @@
                 width: 250px;
                 height: 150px;
             }
-            h1 {
+            h1, h2 {
                 text-align: center;
             }
             h3 {
@@ -46,7 +47,8 @@
                 flex: 25%;
             }
             img {
-                width: 70%;
+                height: 360px;
+                border-radius: 50%;
             }
             hr {
                 border: 2px solid #ffc311;
@@ -67,11 +69,37 @@
         </style>
     </head>
     <body>
+        <div id="hamburger">
+            <ul class="nobull2">
+                <li style="float: left;"><a  href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;"></a></li>
+                
+                <li style="float: right; padding-right: 20px; font-size: 30px;" onclick="showMobileMenu()"><a>☰</a></li>
+            </ul>
+        </div>
+        <script>
+            var menushown = false;
+            function showMobileMenu()
+            {
+                var menu = document.getElementById("menu");
+                if(menushown == false)
+                {
+                    menu.style.display = "block";
+                    menushown = true;
+                }
+                else
+                {
+                    menu.style.display = "none";
+                    menushown = false;
+                }
+    
+            }
+        </script>
+    
         <div id="menu">
             <ul class="nobull">
                 <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/about.html">About</a></li>
-                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/order.html">Order</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/testimonials.html">Testimonials</a></li>
@@ -108,7 +136,7 @@
             </div>
         </div>
         <hr>
-        <h1>Contact Us</h1>
+        <h2>Contact Us</h2>
         <h3>Please email us any questions you have regarding our services. We promise to answer as soon as we can!</h3>
         <form>
         <p class="contactForm">
@@ -149,6 +177,8 @@
         				alert("Please enter your reason for contact");
         				return;
         			}
+                    alert("Email has been received");
+                    location.reload();
                 });
             });
         </script>

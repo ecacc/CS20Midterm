@@ -75,7 +75,8 @@
             .cartTitle {
                 color: rgb(112, 172, 176);
                 font-size: 35px;
-                text-align: none
+                text-align: none;
+                margin-top: 0
             }
             .price {
                 font-size: 20px;
@@ -105,7 +106,6 @@
             }
             h3 {
                 color:rgb(89, 96, 109);
-                padding-left: 15px;
             }
             select:hover {
                 background-color:rgb(248, 231, 183)
@@ -135,6 +135,21 @@
                 margin-left: 140px
             }
 
+            .merchTitle {
+                color:rgb(198, 240, 232);
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 15px;
+                margin-top: 20px
+            }
+
+            .h3End {
+                text-align: center;
+                padding-left: 15px;
+                font-size: 22px;
+                margin-right: 75px
+            }
+
             /* just to keep track of all of the colors */
             .colors {color: rgb(198, 240, 232); color: rgb(112, 172, 176); color: rgb(89, 96, 109); color: rgb(254, 195, 12)}
 
@@ -150,23 +165,24 @@
             @media (max-width: 1180px) { .cartText {height: 330px}}
             @media (max-width: 1190px) { .merchIMG {width: 300px} .cartText {width: 375px} .cartText {font-size: 18px} .logoPic {width: 300px} h3 {font-size: 20px}}
             @media (max-width: 1140px) { .merchIMG {width: 275px} .cartText {width: 350px; height: 350px} .cartText {font-size: 17px} .priceL {margin-left: 80px} h2 {font-size: 30px} .logoPic {width: 275px} h3 {font-size: 19px; padding-left: 0px}}
+            @media (max-width: 1048px) { h1 {margin-top: 100px}}
             @media (max-width: 1070px) { .merchIMG {width: 250px} .cartText {width: 325px; height: 290px} .cartText {font-size: 16px} .priceL {margin-left: 60px} .cart {margin-right: 0px} .logoPic {width: 250px}}
             @media (max-width: 975px) { .merchIMG {width: 225px} .cartText {width: 300px; height: 270px} .cartText {font-size: 15px} .priceL {margin-left: 50px} .price {font-size: 15px} .logoPic {width: 225px; margin-top: 50px} h3 {font-size: 17px}}
-            @media (max-width: 900px) { .merchIMG {width: 275px} .price {font-size: 17} h3 {font-size: 16px} .merch {float: none; width: 80%; margin: 0 auto} .cart{float: none; width: 80%; margin: 0 auto; margin-top: 50px} .cartArea {float: left; margin-right: 100px} .logoDiv {float: left}}
-            @media (max-width: 870px) {.logoPic {width: 200px} .cartArea {margin-right: 70px}}
-            @media (max-width: 830px) { .merchIMG {width: 250px} .cartText {font-size: 14px} h2 {font-size: 40px} .h3Merch {font-size: 20px} .logoPic {width: 175px} .cartArea {margin-right: 50px}}
+            @media (max-width: 900px) { .merchIMG {width: 275px} .price {font-size: 17} .merchTitle {font-size: 20px}.h3End {font-size: 16px; margin-right: 20px} .merch {float: none; width: 80%; margin: 0 auto} .cart{float: none; width: 75%; margin: 0 auto; margin-top: 50px} .cartArea {float: left; width:40%; margin-right: 100px} .logoDiv {width: 40%; float: left}}
+            @media (max-width: 870px) {.cart {width: 80%}}
+            @media (max-width: 830px) { .merchIMG {width: 250px} .cartText {font-size: 14px} h2 {font-size: 40px} .h3Merch {font-size: 20px}}
             @media (max-width: 800px) { .cartText {width: 275px; font-size: 14px} h3 {font-size: 14px}}
             @media (max-width: 760px) { .merchIMG {width: 225px} h2 {font-size: 40px} .h2Merch {font-size: 20px}}
-            @media (max-width: 730px) { .logoPic {width: 150px; margin-top: 75px} .cartText {width: 260px; font-size: 13px}}
+            @media (max-width: 730px) { .logoPic {width: 200px;} .cartText {width: 260px; font-size: 13px} .cart {width: 90%} .merch {width: 90%} .merchIMG {width: 250px} .merch {width: 90%}}
             @media (max-width: 710px) { .cartArea {margin-right: 30px}}
-            @media (max-width: 700px) { .merchIMG {width: 200px}}
-            @media (max-width: 685px) { .cartArea {float: none; width: 50%; margin: 0 auto} .logoDiv {float: none; width: 50%; margin: 0 auto} .logoPic {width: 300px;} h3 {font-size: 25px; text-align: center; padding-left: 60px}}
-            @media (max-width: 635px) { .merch {width: 90%}}
-            @media (max-width: 600px) { h2 {padding-left: 80px} .cartArea {padding-left: 0px;}}
+            @media (max-width: 700px) { .merchIMG {width: 250px} .merch {width: 90%} .cart {width: 90%}}
+            @media (max-width: 685px) { .cartArea {float: none; width: 50%; margin: 0 auto} .logoDiv {float: none; width: 50%; margin: 0 auto} .logoPic {width: 300px;} .merchImg {width: 225px}}
+            @media (max-width: 635px) { .merch {width: 90%} .merchIMG {width: 200px} .price {font-size: 16px} .priceL {margin-left: 30px}}
+            @media (max-width: 600px) { .h3End {padding-left: 80px} .cartArea {padding-left: 0px;} h1 {margin-top: 20px}}
             @media (max-width: 570px) { .merchIMG {width: 175px} .price {font-size: 15px} .priceL {margin-left: 30px} .cartArea {margin-left: 50px} .logoDiv {margin-left: 50px}}
-            @media (max-width: 515px) { .merch {width: 100%}}
+            @media (max-width: 515px) { .merch {width: 100%} .h3End {margin: 0 0 0 0; margin-left: 50px; font-size: 20px} .merchTitle {text-align: center;}}
 
-            @media (max-width: 420px) { .merchIMG {width: 125px} .price {font-size: 13px} .priceL {margin-left: 5px} .cartTitle {font-size: 25px} .cartImg {width: 20px}}
+            @media (max-width: 420px) { .merchIMG {width: 125px} .merch {width: 95%} .price {font-size: 13px} .priceL {margin-left: 5px} .cartTitle {font-size: 25px} .cartImg {width: 20px;} .logoPic {display: block} .logoDiv {margin-left: 0; padding-left: 0;} .cartArea {margin-left: 0; padding-left: 35px; width: 80%}.h3End{margin: 0 0 0 0; width: 100%}}
         </style>
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"
@@ -251,11 +267,37 @@
     <body>
 
         <!--header-->
+        <div id="hamburger">
+            <ul class="nobull2">
+                <li style="float: left;"><a  href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;"></a></li>
+                
+                <li style="float: right; padding-right: 20px; font-size: 30px;" onclick="showMobileMenu()"><a>☰</a></li>
+            </ul>
+        </div>
+        <script>
+            var menushown = false;
+            function showMobileMenu()
+            {
+                var menu = document.getElementById("menu");
+                if(menushown == false)
+                {
+                    menu.style.display = "block";
+                    menushown = true;
+                }
+                else
+                {
+                    menu.style.display = "none";
+                    menushown = false;
+                }
+    
+            }
+        </script>
+    
         <div id="menu">
             <ul class="nobull">
                 <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/about.html">About</a></li>
-                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/order.html">Order</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/testimonials.html">Testimonials</a></li>
@@ -273,7 +315,7 @@
             <div class="merch">
                 <div class="firstrow">
                     <div class="tshirt">
-                        <h3>T-Shirt</h3>
+                        <h3 class="merchTitle">T-Shirt</h3>
                         <img src="tshirt.jpg" class="merchIMG" width="400px"/> <br />
                         <p class="price">
                         Quantity: &nbsp; 
@@ -289,7 +331,7 @@
                     </p>               
                     </div>
                     <div class="crewneck">
-                        <h3>Crew Neck</h3>
+                        <h3 class="merchTitle">Crew Neck</h3>
                         <img src="crewneck.jpg" class="merchIMG" width="400px"/>
                         <p class="price">
                             Quantity: &nbsp; 
@@ -307,7 +349,7 @@
                 </div>
                 <div class="secondrow">
                     <div class="totebag">
-                        <h3>Tote Bag</h3>
+                        <h3 class="merchTitle">Tote Bag</h3>
                         <img src="totebag.jpg" class="merchIMG" width="400px"/>
                         <p class="price">
                             Quantity: &nbsp; 
@@ -323,7 +365,7 @@
                         </p>
                     </div>
                     <div class="pillow">
-                        <h3>Pillow</h3>
+                        <h3 class="merchTitle">Pillow</h3>
                         <img src="pillow.jpg" class="merchIMG" width="400px"/>
                         <p class="price">
                             Quantity: &nbsp; 
@@ -365,17 +407,12 @@
                 </div>
                 <div class="logoDiv">
                     <img src="eventastic.png" width="400" class="logoPic"/>
-                    <h3>Thank You for Supporting Eventastic!</h3>
+                    <h3 class="h3End">Thank You for Supporting Eventastic!</h3>
                 </div>
             </div>
         </div>
 
-        <br /> <br /> <br /> <br /> <br /> <br />
-
-        <!--footer-->
-        <footer class="footer">
-            <p>450 SALEM ST MEDFORD MA 02155 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Call Us:<a href="https://ecacc.github.io/CS20Midterm/contact.html">1-800-920-4938</a></p>
-        </footer>
+        <br /> <br />
 
     </body>
 </html>
