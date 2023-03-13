@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Contact | Eventastic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name = "keywords" content = "Contact, Meet, experienced, email" />
         <link rel="icon" href="logo.png">
         <link rel="stylesheet" href="menustyle.css">
@@ -29,7 +30,7 @@
                 width: 250px;
                 height: 150px;
             }
-            h1 {
+            h1, h2 {
                 text-align: center;
             }
             h3 {
@@ -46,7 +47,8 @@
                 flex: 25%;
             }
             img {
-                width: 70%;
+                height: 360px;
+                border-radius: 50%;
             }
             hr {
                 border: 2px solid #ffc311;
@@ -97,7 +99,7 @@
             <ul class="nobull">
                 <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/about.html">About</a></li>
-                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/order.html">Order</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/testimonials.html">Testimonials</a></li>
@@ -175,6 +177,8 @@
         				alert("Please enter your reason for contact");
         				return;
         			}
+                    alert("Email has been received");
+                    location.reload();
                 });
             });
         </script>
