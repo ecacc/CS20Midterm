@@ -291,6 +291,27 @@
                 }
     
             }
+
+            function showOriginalMenu()
+        {
+            if(window.innerWidth >= 1055)
+            {
+                if(menushown == false)
+                {
+                    menu.style.display = "block";
+                    menushown = true;
+                }
+            }
+            if(window.innerWidth < 1055)
+            {
+                if(menushown == true)
+                {
+                    menu.style.display = "none";
+                    menushown = false;
+                }
+            }
+        }
+        window.addEventListener("resize", showOriginalMenu);
         </script>
     
         <div id="menu">
@@ -305,7 +326,7 @@
             </ul>
         </div>
 
-        <br /> <br /> <br /> <br /> <br />
+        <br /><br /><br /><br /><br /><br />
 
         <h1>Welcome to the Eventastic Store!</h1>
         <h2 class="h2Merch">Buy Quality Eventastic Merchandise</h2>
