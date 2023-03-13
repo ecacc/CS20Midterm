@@ -239,7 +239,20 @@
                 menu.style.display = "none";
                 menushown = false;
             }
+        }
 
+        function hideOriginalMenu2()
+        {
+            if(menushown == true)
+            {
+                if(window.innerWidth <= 1055)
+                {
+                    menu.style.display = "none";
+                    menushown = false;
+                }
+            }
+            window.removeEventListener("resize", hideOriginalMenu2);
+            window.addEventListener("resize",hideOriginalMenu);
         }
         function showOriginalMenu()
         {
@@ -251,15 +264,16 @@
                     menushown = true;
                 }
             }
-            if(window.innerWidth < 1055)
+        }
+        function hideOriginalMenu()
+        {
+            if(window.innerWidth >= 1055)
             {
-                if(menushown == true)
-                {
-                    menu.style.display = "none";
-                    menushown = false;
-                }
+                window.removeEventListener("resize", hideOriginalMenu);
+                window.addEventListener("resize", hideOriginalMenu2);
             }
         }
+        window.addEventListener("resize", hideOriginalMenu2);
         window.addEventListener("resize", showOriginalMenu);
     </script>
 
