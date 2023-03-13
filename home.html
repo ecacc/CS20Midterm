@@ -39,7 +39,7 @@ body
     margin:10px;
 }
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 1050px)
 {
     body
     {
@@ -52,6 +52,7 @@ body
         display: block;
     }
 }
+
     
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -87,8 +88,29 @@ body
                 menu.style.display = "none";
                 menushown = false;
             }
-
         }
+
+        function showOriginalMenu()
+        {
+            if(window.innerWidth >= 1055)
+            {
+                if(menushown == false)
+                {
+                    menu.style.display = "block";
+                    menushown = true;
+                }
+            }
+            if(window.innerWidth < 1055)
+            {
+                if(menushown == true)
+                {
+                    menu.style.display = "none";
+                    menushown = false;
+                }
+            }
+        }
+        window.addEventListener("resize", showOriginalMenu);
+
     </script>
 
     <div id="menu">

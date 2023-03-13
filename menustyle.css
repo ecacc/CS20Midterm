@@ -84,6 +84,15 @@
         display:block;
     }
 }
+
+@media screen and (min-width: 1050px)
+{
+    #menu
+    {
+        display: block;
+    }
+}
+
 .nobull li a:hover 
 {
     background-color: #111;
