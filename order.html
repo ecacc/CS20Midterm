@@ -82,12 +82,12 @@
 
             @media (max-width: 1540px) {.bookpage {width: 55%} .innerform {width: 55%}}
             @media (max-width: 1300px) {.bookpage {width: 70%} .innerform {width: 70%}}
-            @media (max-width: 1150px) {.bookpage {margin-top: 100px}}
             @media (max-width: 1115px) {.bookpage {width: 80%} .innerform {width: 80%}}
+            @media (max-width: 1056px) { .bookpage {margin-top: 80px}}
             @media (max-width: 985px) {.bookpage {width: 90%} .innerform {width: 90%}}
-            @media (max-width: 640px) {.bookpage {margin-top: 150px}}
-            @media (max-width: 600px) {.bookpage {margin-top: 475px}}
             @media (max-width: 570px) {textarea {width: 300}}
+
+            @media (max-width: 600px) { .bookpage {margin-top: 0px}}
 
             @media (max-width: 570px) {.bookpage {font-size: 13px} .inputtxt {width: 125px}}
             @media (max-width: 300px) {textarea {width: 200} .bookpage {font-size: 10px} .inputtxt {width: 75px}}
@@ -213,11 +213,37 @@
     <body>
 
         <!--header-->
+        <div id="hamburger">
+            <ul class="nobull2">
+                <li style="float: left;"><a  href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;"></a></li>
+                
+                <li style="float: right; padding-right: 20px; font-size: 30px;" onclick="showMobileMenu()"><a>☰</a></li>
+            </ul>
+        </div>
+        <script>
+            var menushown = false;
+            function showMobileMenu()
+            {
+                var menu = document.getElementById("menu");
+                if(menushown == false)
+                {
+                    menu.style.display = "block";
+                    menushown = true;
+                }
+                else
+                {
+                    menu.style.display = "none";
+                    menushown = false;
+                }
+    
+            }
+        </script>
+
         <div id="menu">
             <ul class="nobull">
-                <li style="float: left; margin: 0; padding: 0;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
+                <li style="float: left;"><a style="margin: 0; padding: 0;" href="https://ecacc.github.io/CS20Midterm/home.html"><img src="eventastic_icon.png" style="width:80px;height:80px;margin: 0; padding: 0;"></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/about.html">About</a></li>
-                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact Us</a></li>
+                <li><a href="https://ecacc.github.io/CS20Midterm/contact.html">Contact</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/services.html">Services</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/order.html">Order</a></li>
                 <li><a href="https://ecacc.github.io/CS20Midterm/testimonials.html">Testimonials</a></li>
@@ -313,11 +339,6 @@
 
         <h3>Once your form is submitted we review it and get back to you in less than 24 hours!</h3>
     </div>
-
-    <!--footer-->
-    <footer class="footer">
-        <p>450 SALEM ST MEDFORD MA 02155 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Call Us:<a href="https://ecacc.github.io/CS20Midterm/contact.html">1-800-920-4938</a></p>
-    </footer>
 
 
     </body>
