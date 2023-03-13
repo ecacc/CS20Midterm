@@ -57,7 +57,7 @@
     height: 80px;
     line-height: 80px;
 }
-.nobull2 li a:hover 
+.nobull2 li:not(:first-child) a:hover 
 {
     background-color: #111;
     cursor: pointer;
@@ -84,16 +84,7 @@
         display:block;
     }
 }
-
-@media screen and (min-width: 1050px)
-{
-    #menu
-    {
-        display: block;
-    }
-}
-
-.nobull li a:hover 
+.nobull li:not(:first-child) a:hover 
 {
     background-color: #111;
 }
